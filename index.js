@@ -179,9 +179,11 @@ function lowerCaseStrings(strings) {
  * 
  * [2] Invoking `isItAnApple` with `['a', 'b', 'c' ]` will return `[ false, false, false ]`.
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(strings) {
+  return strings.map((arrItem => arrItem === 'apple'));  
 }
+
+
 
 /**
  * ### Challenge `removeApple`
