@@ -241,7 +241,11 @@ return combinedString;
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
 function getFullNames(runners) { 
+<<<<<<< HEAD
   const runnerNames = runners.map(arrItem =>);
+=======
+  return runners.map(arrItem => `${arrItem.last_name}, ${arrItem.first_name}`);
+>>>>>>> 1598ddc0b55460cb14780304abeab702220bf4a5
 }
 
 /**
@@ -256,8 +260,8 @@ function getFullNames(runners) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
-  /* CODE HERE */
+function firstNamesAllCaps(runners) {
+    return runners.map(arrItem => arrItem.first_name.toUpperCase());
 }
 
 /**
