@@ -274,8 +274,8 @@ function firstNamesAllCaps(runners) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
-  /* CODE HERE */
+function getRunnersByTShirtSize(runners, tShirtSize) {
+  return runners.filter(runner => runner.shirt_size === tShirtSize );
 }
 
 /**
@@ -289,8 +289,9 @@ function getRunnersByTShirtSize(/* CODE HERE */) {
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns a number which is the sum of the donations by all runners.
 */
-function tallyUpDonations(/* CODE HERE */) {
-  /* CODE HERE */
+function tallyUpDonations(runners) {
+  const reducer = ( total, element ) => total + element.donation;
+  return runners.reduce(reducer, 0); 
 }
 
 /////////////// CLOSURES ///////////////
@@ -304,9 +305,19 @@ function tallyUpDonations(/* CODE HERE */) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ * A. counter 1 has a closed loop for code that can only be changed by calling the function, where as couter 2 is just calling a function with a
+ * variable that is not enclosed. That Variable can be manipulated from outside of the function.
+ * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ * A. counter 1 uses a closure. You can tell because the variable that is being called can only be called using that function and can not
+ * be declared from the outside.
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ * 
+ * A. counter1 would be perferrable if you need to have a variable manipulated, but do not want its value changed elsewhere or overwritten.
+ * This keeps the variable private and the code DRY. However, using closures when not needed can create performance issues. In that case, 
+ * counter 2 would be better. 
  *
 */
 
