@@ -241,7 +241,11 @@ return combinedString;
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
 function getFullNames(runners) { 
+<<<<<<< HEAD
+  const runnerNames = runners.map(arrItem =>);
+=======
   return runners.map(arrItem => `${arrItem.last_name}, ${arrItem.first_name}`);
+>>>>>>> 1598ddc0b55460cb14780304abeab702220bf4a5
 }
 
 /**
