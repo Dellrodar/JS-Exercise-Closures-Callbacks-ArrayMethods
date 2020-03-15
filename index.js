@@ -241,11 +241,7 @@ return combinedString;
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
 function getFullNames(runners) { 
-<<<<<<< HEAD
-  const runnerNames = runners.map(arrItem =>);
-=======
   return runners.map(arrItem => `${arrItem.last_name}, ${arrItem.first_name}`);
->>>>>>> 1598ddc0b55460cb14780304abeab702220bf4a5
 }
 
 /**
@@ -363,8 +359,14 @@ function counter2() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(maxValue) {
+  let counter = 0;
+  return function maxCalc() {
+    if (maxValue === counter){
+      let counter = 0;
+    }
+    return counter++;
+  }
 }
 
 /////////////// END OF CHALLENGE ///////////////
