@@ -133,7 +133,7 @@ function processProduct(num1, num2, callback) {
  * should return 3.
 */
 function processDuplicateFree(list, callback) {
-  list = list.filter((item, index) => list.indexOf(item) === index)
+  list = list.filter((arrItem, index) => list.indexOf(arrItem) === index)
   return callback(list);
 }
 
