@@ -360,12 +360,10 @@ function counter2() {
  * etc
 */
 function counterMakerWithLimit(maxValue) {
-  let counter = 0;
-  return function maxCalc() {
-    if (maxValue === counter){
-      let counter = 0;
-    }
-    return counter++;
+  let counter = -1;
+  return () => {
+    maxValue === counter ? counter = 0 : counter++;
+    return counter;
   }
 }
 
